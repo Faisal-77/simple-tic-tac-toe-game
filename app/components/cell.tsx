@@ -35,8 +35,8 @@ const Cell = ({ go, setGo, id, cells, setCells, cell, winner}: cellProps) => {
     copyCell[id] = cellToChange;
     setCells(copyCell);
   };
-  return <div className="square" onClick={handleClick}>
+  return (<div className="square" onClick={handleClick}>
     <div className={cell}>{cell ? (cell === "cross" ? "X" : "O") : ""}</div>
-  </div>;
+  </div>);
 };
 export default Cell;
